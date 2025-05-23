@@ -1,0 +1,59 @@
+<section id="Stylish slippers" style="max-width: 800px; margin: 3rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-family: 'Montserrat', sans-serif; color: #111;">
+  <div style="position: relative; max-width: 450px; margin: 0 auto 2rem auto;">
+    <img id="slider-image" src="product1-main.jpg" alt="Stylish slippers  Image" style="width: 100%; border-radius: 8px; object-fit: cover;" />
+    <!-- Left arrow -->
+    <button id="prev-btn" aria-label="Previous Image" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.4); border: none; color: white; font-size: 2rem; padding: 0 12px; border-radius: 50%; cursor: pointer;">‹</button>
+    <!-- Right arrow -->
+    <button id="next-btn" aria-label="Next Image" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.4); border: none; color: white; font-size: 2rem; padding: 0 12px; border-radius: 50%; cursor: pointer;">›</button>
+  </div>
+  <div>
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; text-align: center;">Stylish Slippers</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 1rem; text-align: center;">
+     Step into comfort and style with Luxe by Lizzy’s Luxury Slippers. Crafted from premium soft materials, these slippers offer a perfect blend of elegance and coziness for your feet. Whether you're relaxing at home or stepping out, their durable sole provides excellent grip while the plush interior cushions every step. Designed for both men and women, these slippers are perfect for treating yourself or as a thoughtful gift. Experience the ultimate in everyday luxury.
+    </p>
+    <p style="font-weight: 600; text-align: center; font-size: 1.2rem; margin-bottom: 1rem;">Price: ₦8,500</p>
+    <div style="max-width: 400px; margin: 0 auto 1.5rem auto;">
+      <strong>Features:</strong>
+      <ul style="list-style: disc inside; font-size: 1rem; padding-left: 1rem;">
+        <li>Soft, breathable fabric for all-day comfort</li>
+        <li>Durable, non-slip sole for indoor and light outdoor use</li>
+        <li>Stylish design available in multiple colors.</li>
+        <li>Stylish design available in multiple colors</li>
+      </ul>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://chat.whatsapp.com/HJnsaBBDGh44Y437sospD0" target="_blank" rel="noopener" style="display: inline-block; background-color: #f9a825; color: white; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s ease;">
+        Order Now on WhatsApp
+      </a>
+    </div>
+  </div>
+  
+  <script>
+    (function() {
+      const images = [
+        'https://i.ibb.co/TBgYns8h/B1455992-7-D4-A-459-B-A6-D8-C5-B47-F0-B5655.jpg'
+        , 
+        ('') 
+      ];
+      let currentIndex = 0;
+      
+      const sliderImage = document.getElementById('slider-image');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      
+      function showImage(index) {
+        sliderImage.src = images[index];
+      }
+      
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        showImage(currentIndex);
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        showImage(currentIndex);
+      });
+    })();
+  </script>
+</section>

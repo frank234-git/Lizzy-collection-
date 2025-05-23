@@ -1,0 +1,60 @@
+<section id="luxury-perfume" style="max-width: 800px; margin: 3rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-family: 'Montserrat', sans-serif; color: #111;">
+  <div style="position: relative; max-width: 450px; margin: 0 auto 2rem auto;">
+    <img id="slider-image" src="product1-main.jpg" alt="Luxury Perfume Image" style="width: 100%; border-radius: 8px; object-fit: cover;" />
+    <!-- Left arrow -->
+    <button id="prev-btn" aria-label="Previous Image" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.4); border: none; color: white; font-size: 2rem; padding: 0 12px; border-radius: 50%; cursor: pointer;">‹</button>
+    <!-- Right arrow -->
+    <button id="next-btn" aria-label="Next Image" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.4); border: none; color: white; font-size: 2rem; padding: 0 12px; border-radius: 50%; cursor: pointer;">›</button>
+  </div>
+  <div>
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; text-align: center;">Luxury Perfume</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 1rem; text-align: center;">
+      Indulge in the timeless elegance of Luxe by Lizzy Signature Luxury Perfume. Crafted with the finest natural essences, this exquisite fragrance blends floral, woody, and citrus notes to create a scent that captivates and inspires confidence. Perfect for every occasion, it leaves a lasting impression that is both subtle and unforgettable.
+    </p>
+    <p style="font-weight: 600; text-align: center; font-size: 1.2rem; margin-bottom: 1rem;">Price: ₦8,500</p>
+    <div style="max-width: 400px; margin: 0 auto 1.5rem auto;">
+      <strong>Features:</strong>
+      <ul style="list-style: disc inside; font-size: 1rem; padding-left: 1rem;">
+        <li>Long-lasting fragrance that lingers all day.</li>
+        <li>Sophisticated blend of jasmine, sandalwood, and bergamot.</li>
+        <li>Suitable for both men and women.</li>
+        <li>Elegant bottle design perfect for gifting.</li>
+        <li>Alcohol-free and gentle on the skin.</li>
+      </ul>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://chat.whatsapp.com/HJnsaBBDGh44Y437sospD0" target="_blank" rel="noopener" style="display: inline-block; background-color: #f9a825; color: white; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s ease;">
+        Order Now on WhatsApp
+      </a>
+    </div>
+  </div>
+  
+  <script>
+    (function() {
+      const images = [
+        'https://i.ibb.co/Fbtc9d0c/B487-DCCA-2-DD4-4-FE3-9883-C84539-A7548-F.jpg',
+        'https://i.ibb.co/LDQWbgHZ/D7-F59-F68-369-F-48-C9-8-B31-67-AD6-C3-C2023.jpg',
+        'https://i.ibb.co/x87XDmQ0/2824-B3-E2-467-E-44-A6-B971-6-C592936-B93-C.jpg'
+      ];
+      let currentIndex = 0;
+      
+      const sliderImage = document.getElementById('slider-image');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      
+      function showImage(index) {
+        sliderImage.src = images[index];
+      }
+      
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        showImage(currentIndex);
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        showImage(currentIndex);
+      });
+    })();
+  </script>
+</section>

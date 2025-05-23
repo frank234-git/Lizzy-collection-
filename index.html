@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe by Lizzy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f7f3;
+      color: #111;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 1rem 2rem;
+      color: white;
+    }
+
+    nav h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    header {
+      background: url('https://i.ibb.co/5hwLpsBp/EEEACE8-D-A786-43-B8-A8-D3-E71-E4-ABC1562.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.product {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product:hover {
+  transform: translateY(-4px);
+}
+
+.product img {
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.product strong {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.product p {
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0.5rem;
+  color: #444;
+}
+
+.product a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product a:hover {
+  background-color: gold;
+  color: #000;
+  transform: translateY(-2px);
+}
+   .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: bounce 2s infinite;
+  }
+
+  .whatsapp img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .whatsapp:hover {
+    background-color: #1ebc59;
+    transform: scale(1.1);
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 500px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Lizzy Luxury Collection</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h2>Luxury Hair & Beauty Essentials</h2>
+    <p>Elegance made simple. Delivered across Nigeria.</p>
+  </header>
+
+  <section id="about" style="background-color:#f9f7f3;">
+    <h2 style="font-family:'Playfair Display', serif; font-size:2rem; margin-bottom:1rem;">About Lizzy Luxury</h2>
+    <p style="max-width:700px; margin:0 auto; font-size:1.1rem; line-height:1.8;">
+      At <strong>Lizzy Luxury</strong>, we believe elegance is a lifestyle. Born from a passion for timeless beauty and effortless fashion, we handpick premium hair, cosmetics, and fashion essentials to help every woman feel bold, beautiful, and luxurious—without limits.
+    </p>
+    <p style="max-width:700px; margin:1.5rem auto 0; font-size:1.1rem; line-height:1.8;">
+      Whether it’s the perfect fragrance, a silky wig, flawless skincare, or the latest trend in baggies and slippers, our collection is curated to deliver class and comfort across Nigeria. Every item reflects our promise — quality, beauty, and confidence in every detail.
+    </p>
+  </section>
+
+  <section id="products">
+    <h2 style="font-family:'Playfair Display', serif;">Our Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.ibb.co/Fbtc9d0c/B487-DCCA-2-DD4-4-FE3-9883-C84539-A7548-F.jpg" alt="Luxury Perfume">
+        <strong>Luxury Perfume</strong>
+        <p>Elegant & lasting.</p>
+        <a href="product 1.html">View</a>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/TBgYns8h/B1455992-7-D4-A-459-B-A6-D8-C5-B47-F0-B5655.jpg" alt="Stylish Slippers">
+        <strong>Stylish Slippers</strong>
+        <p>Soft & chic.</p>
+<a href="product 2.html">View</a>
+ 
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/vC9szGfp/FD8-C21-D9-2-AEA-4-D5-F-AE7-C-2899705-DDD2-E.jpg" alt="Baggie Trousers">
+        <strong>Baggie Trousers</strong>
+        <p>Relaxed fit.</p>
+         <a href="product 3.html">View</a>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/sp4MnKJ6/CA43-C92-C-092-F-40-C3-A3-CD-C433814-BCEA7.jpg" alt="Classic Bags">
+        <strong>Classic Bags</strong>
+        <p>Timeless style.</p>
+        <a href="product 4.html">View</a>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/WppvGp6S/8-EE67-BA2-B745-4-A8-C-B185-EDFDBF92-CE31.jpg" alt="Cosmetics Package">
+        <strong>Cosmetics Package</strong>
+        <p>Glow up kit.</p>
+        <a href="product 5.html">View</a>
+      </div>
+    </div>
+  </section>
+    <section id="Gallery" style="padding: 2rem; background: #fff;">
+  <h2 style="text-align: center; font-family: 'Playfair Display', serif;">Our Gallery </h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem; padding-top: 2rem; text-align: center;">
+    
+    <div style="text-align: center;">
+  <img src="https://i.ibb.co/6JwQJzDY/88-B3-CA93-0-FAA-4201-821-A-DC18592-D554-A.jpg" alt="Bone straight " style="width: 100%; height: auto; border-radius: 8px;">
+  <p style="margin-top: 0.5rem; font-weight: 600;">Long Wig</p>
+</div>
+        <div style="text-align: center;">
+<img src="https://i.ibb.co/pBQwtfhv/B808-FFD9-9-A77-4-BFF-982-B-E37-BD1-BF3-B0-D.jpg" alt="Luxury shoe" style="width: 100%; height: auto; border-radius: 8px;">
+      <p style="margin-top: 0.5rem; font-weight: 600;">Woman's Metalic chain shoe.</p>
+    </div>
+  <div style="text-align: center;"><img src="https://i.ibb.co/Jwx4N6R7/46840-C04-E6-C5-4-D23-B9-FA-1637-E8-F81816.jpg" alt="Luxury Watch" style="width: 100%; height: auto; border-radius: 8px;">
+  <p style="margin-top: 0.5rem; font-weight: 600;">LUXURY WATCH</p>
+</div>
+    <div style="text-align: center;">
+<img src="https://i.ibb.co/wND6jGQq/155-C8-B18-215-C-4-AB5-97-FE-F4-D55-F16-D9-BE.jpg" alt="Lip mask " style="width: 100%; height: auto; border-radius: 8px;">
+<p style="margin-top: 0.5rem; font-weight: 600;">Lip Mask</p>
+    </div>
+    <div style="text-align: center;">
+<img src="https://i.ibb.co/MykpD1Q7/D788-BDF9-8-C34-4974-8-ED6-CEB023479-BA5.jpg" alt="Chain trouser" style="width: 100%; height: auto; border-radius: 8px;">
+<p style="margin-top: 0.5rem; font-weight: 600;">Chain-wallet trouser </p>
+    </div>
+    <div style="text-align: center;">
+    <img src="https://i.ibb.co/VpYMN1Sk/8-CCEE230-BB2-F-4456-96-B5-D32-C15-FEE635.jpg" alt="Wig" style="width: 100%; height: auto; border-radius: 8px;">
+<p style="margin-top: 0.5rem; font-weight: 600;">Short-curly wig </p>
+    </div>
+    
+  <div style="text-align: center;">
+  <img src="https://i.ibb.co/NgCnNXLz/4-DBBD504-8-B83-4407-BE9-E-143-D53-B21156.jpg" alt="Deodrant" style="width: 100%; height: auto; border-radius: 8px;">
+<p style="margin-top: 0.5rem; font-weight: 600;">Deodrant-perfume  </p> 
+</div>
+<div style="text-align: center;">
+<img src="https://i.ibb.co/gFZCVsd9/49-A78043-CDCF-48-BB-8178-342-F47-A0524-C.jpg" alt="Brush" style="width: 100%; height: auto; border-radius: 8px;">
+<p style="margin-top: 0.5rem; font-weight: 600;">Magic your life-lip glosses  </p>
+</div>
+</section>
+  <section style="background:#fff; padding:2rem; max-width:700px; margin:2rem auto; text-align:center;">
+  <h2 style="font-family:'Playfair Display', serif;">What Our Customers Say</h2>
+  <blockquote style="font-style:italic; margin:1rem 0;">
+    “Lizzy’s products transformed my look — quality and style unmatched!”
+  </blockquote>
+  <cite>- Ada, Lagos</cite>
+  
+  <blockquote style="font-style:italic; margin:1rem 0;">
+    “Fast delivery and excellent customer service. Highly recommend!”
+  </blockquote>
+  <cite>- Emeka, Abuja</cite>
+</section>
+  <section style="background:#f9f7f3; padding:2rem; max-width:600px; margin:2rem auto; text-align:center;">
+  <h3 style="font-family:'Playfair Display', serif;">Business Hours</h3>
+  <p>Mon - Fri: 9:00 AM – 6:00 PM<br />Sat: 10:00 AM – 4:00 PM<br />Sun: Closed</p>
+
+  <h3 style="font-family:'Playfair Display', serif; margin-top:2rem;">Our Location</h3>
+  <p>Satellite town, Marwa road nitel estate,No 14 oyekan street</p>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.123456789!2d3.3792!3d6.5244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf46e7b1c0001%3A0x50edc636f3a8c5a6!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1627556361573!5m2!1sen!2sus"
+    width="100%" height="450" style="border:20;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+<section id="contact" 
+  <div style="flex: 1; padding: 2rem; background: #fff;">
+    <h2>Contact Us</h2>
+    <form onsubmit="sendEmail(event)">
+      <input type="text" name="name" placeholder="Your Name" required><br><br>
+      <input type="email" name="email" placeholder="Your Email" required><br><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+<a class="whatsapp" href="https://chat.whatsapp.com/HJnsaBBDGh44Y437sospD0" target="_blank" rel="noopener" title="Chat with us on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp" />
+</a>
+
+<section id="faq" style="background-color: #000; color: #fff; padding: 2rem;">
+  <h2 style="font-family:'Playfair Display', serif; margin-bottom: 1.5rem; text-align: center;">Frequently Asked Questions</h2>
+  <div style="max-width: 800px; margin: auto; text-align: left;">
+    <div style="margin-bottom: 1.5rem;">
+      <strong>Q: How do I place an order?</strong>
+      <p>A: You can order directly by chatting with us on WhatsApp or through our Instagram page.</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <strong>Q: Do you offer delivery?</strong>
+      <p>A: Yes, we offer nationwide delivery across Nigeria. Delivery fees depend on your location.</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <strong>Q: Can I return a product?</strong>
+      <p>A: We only accept returns if the product is damaged or incorrect. Please notify us within 24 hours of delivery.</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <strong>Q: Do you sell original products?</strong>
+      <p>A: Absolutely! All our items are carefully selected, high-quality, and 100% original.</p>
+    </div>
+  </div>
+
+  <footer id="contact">
+    &copy; 2025 Luxe by Lizzy. All rights reserved.
+  </footer>
+</section>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init('Tyb9tIHSlpP8Y7JLy'); // Replace with your EmailJS user ID
+  })();
+
+  function sendEmail(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_sxtf2l6', 'template_i5zfokg', event.target)
+      .then(() => {
+        alert(<!doctype html></html>'Message sent successfully!');
+        event.target.reset();
+      }, (error) => {
+        alert('Failed to send message. Error: ' + JSON.stringify(error));
+      });
+  }
+</script>
+</body>
+</html>

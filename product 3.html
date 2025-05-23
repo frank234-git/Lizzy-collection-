@@ -1,0 +1,61 @@
+<section id="Baggie Trouser" style="max-width: 800px; margin: 3rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-family: 'Montserrat', sans-serif; color: #111;">
+  <div style="position: relative; max-width: 450px; margin: 0 auto 2rem auto;">
+    <img id="slider-image" src="product1-main.jpg" alt="Baggie trousers  Image" style="width: 100%; border-radius: 8px; object-fit: cover;" />
+    <!-- Left arrow -->
+    <button id="prev-btn" aria-label="Previous Image" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.4); border: none; color: white; font-size: 2rem; padding: 0 12px; border-radius: 50%; cursor: pointer;">‹</button>
+    <!-- Right arrow -->
+    <button id="next-btn" aria-label="Next Image" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.4); border: none; color: white; font-size: 2rem; padding: 0 12px; border-radius: 50%; cursor: pointer;">›</button>
+  </div>
+  <div>
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; text-align: center;">Baggie Trouser </h2>
+    <p style="font-size: 1.1rem; margin-bottom: 1rem; text-align: center;">
+     Step into effortless elegance with our signature Baggie Trousers — where comfort meets high-end fashion. Tailored with precision and crafted from premium fabrics, these trousers offer a relaxed fit without compromising on style. Perfect for casual chic or upscale streetwear, they redefine versatility with a bold, confident silhouette. Elevate your wardrobe with the timeless appeal of luxury that moves with you.
+    </p>
+    <p style="font-weight: 600; text-align: center; font-size: 1.2rem; margin-bottom: 1rem;">Price: ₦8,500</p>
+    <div style="max-width: 400px; margin: 0 auto 1.5rem auto;">
+      <strong>Features:</strong>
+      <ul style="list-style: disc inside; font-size: 1rem; padding-left: 1rem;">
+        <li><!doctype html></html>Premium Fabric – Soft, breathable, and durable material for all-day comfort </li>
+        <li>Tailored Relaxed Fit – Designed for a stylish yet effortless silhouette </li>
+        <li>Versatile Styling – Perfect for both casual and upscale looks  </li>
+        <li>Available in Timeless Colors – Neutral tones that match any wardrobe  </li>
+      </ul>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://chat.whatsapp.com/HJnsaBBDGh44Y437sospD0" target="_blank" rel="noopener" style="display: inline-block; background-color: #f9a825; color: white; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s ease;">
+        Order Now on WhatsApp
+      </a>
+    </div>
+  </div>
+  
+  <script>
+    (function() {
+      const images = [
+        'https://i.ibb.co/vC9szGfp/FD8-C21-D9-2-AEA-4-D5-F-AE7-C-2899705-DDD2-E.jpg'
+        , 
+        'https://i.ibb.co/cKjkhcsJ/71-A49305-6299-4-CA0-B427-1-CF1-D7-E7-C2-B2.jpg'
+        ,
+        'https://i.ibb.co/TDS3bv0K/6-E3-A4-C2-B-9054-4476-B359-E47-EEFE3-E75-A.jpg'
+      ];
+      let currentIndex = 0;
+      
+      const sliderImage = document.getElementById('slider-image');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      
+      function showImage(index) {
+        sliderImage.src = images[index];
+      }
+      
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        showImage(currentIndex);
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        showImage(currentIndex);
+      });
+    })();
+  </script>
+</section>
